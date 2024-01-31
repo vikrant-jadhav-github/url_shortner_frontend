@@ -1,0 +1,25 @@
+<div class="viewurls">
+    <h2>Here Is All The Urls That We Have Shortened</h2>
+    <div class="nodata" *ngIf="urlsData?.length == 0">
+        <img src="https://cdn.dribbble.com/users/633133/screenshots/3218559/media/3490827c0bba959b5bc92bb031f5dc05.png?resize=800x600&vertical=center" alt="Image">
+        <h3>You Have Not Shorten Any Url Yet</h3>
+    </div>
+    <div class="allurls">
+        <div class="url" *ngFor="let url of urlsData">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Original URL</th>
+                        <th>UUID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="column-80"><a href="{{url.url}}">{{url.url}}</a></td>
+                        <td class="column-20">{{url.uuid}}</td>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>

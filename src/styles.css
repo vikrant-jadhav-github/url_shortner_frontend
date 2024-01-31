@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #02040a;
+    --secondary-color: #0d1116;
+    --border-color: #30363d;
+    --hover-color: #21262D;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    color: bisque;
+}
+
+button{
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 1.5rem;
+    font-size: large;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--hover-color);
+    transition: 500ms linear;
+}
+
+.nodata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 3rem;
+}
+
+input{
+    color: white;
+    background-color: var(--hover-color);
+    font-size: large;
+}
+
+input::placeholder{
+    color: white;
+}
+
+.logout:hover{
+    cursor: pointer;
+}
+
+.branding h2{
+    font-size: 6.5rem;
+}

@@ -1,0 +1,23 @@
+<div class="authentication">
+
+    <div *ngIf="!toggleLogin" class="register">
+        <h1>REGISTER</h1>
+        <form method="POST" #registerForm="ngForm" (ngSubmit)="registerAccount(registerForm.value)">
+            <input type="text" ngModel name="name" placeholder="Enter Full Name">
+            <input type="email" ngModel name="email" placeholder="Enter Email">
+            <input type="password" ngModel name="password" placeholder="Enter Password">
+            <input type="password" ngModel name="confirmPassword" placeholder="Confirm Password">
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div *ngIf="toggleLogin" class="login">
+        <h1>LOGIN</h1>
+        <form method="POST" #loginForm="ngForm" (ngSubmit)="loginAccount(loginForm.value)">
+            <input type="email" ngModel name="email" placeholder="Enter Email">
+            <input type="password" ngModel name="password" placeholder="Enter Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
